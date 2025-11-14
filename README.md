@@ -5,21 +5,21 @@ combined with **Retrieval-Augmented Generation (RAG)** to build an
 intelligent Vietnamese chatbot for **restaurant and hotel customer
 support**.
 
-This system is designed to: - Detect **aspects** from user queries\
-- Classify **sentiment** for each aspect\
-- Combine with **RAG** to generate natural and informative responses\
-- Support **deployment** with Flask + Ngrok\
+This system is designed to: - Detect **aspects** from user queries
+- Classify **sentiment** for each aspect
+- Combine with **RAG** to generate natural and informative responses
+- Support **deployment** with Flask + Ngrok
 - Provide **full inference notebook**
 
 ------------------------------------------------------------------------
 
 ## 🚀 Features
 
--   Official UIT-ViABSA datasets (Hotel + Restaurant)\
--   Training notebooks for both domains\
--   Visualization notebook (loss, confusion matrix, attention maps)\
--   Unified inference pipeline (ABSA → RAG → Response)\
--   Fully compatible with Qwen, LLaMA, Gemini, ViLM\
+-   Official UIT-ViABSA datasets (Hotel + Restaurant)
+-   Training notebooks for both domains
+-   Visualization notebook (loss, confusion matrix, attention maps)
+-   Unified inference pipeline (ABSA → RAG → Response)
+-   Fully compatible with Qwen, LLaMA, Gemini, ViLM
 -   Deployable through Flask with online tunneling (Ngrok)
 
 ------------------------------------------------------------------------
@@ -50,15 +50,15 @@ This system is designed to: - Detect **aspects** from user queries\
 
 ### **1️⃣ ABSA Pipeline**
 
--   Input sentence\
--   Tokenization\
--   Aspect category prediction\
--   Sentiment classification\
+-   Input sentence
+-   Tokenization
+-   Aspect category prediction
+-   Sentiment classification
 -   Output example:
 
-```{=html}
-<!-- -->
-```
+    ```
+    Sentence: "Dịch vụ ở khách sạn rất tốt."
+
     {
       "aspect": "SERVICE#GENERAL",
       "sentiment": "positive"
@@ -66,9 +66,9 @@ This system is designed to: - Detect **aspects** from user queries\
 
 ### **2️⃣ RAG Pipeline**
 
--   Retrieve top-K relevant passages\
--   Combine user query + retrieved context\
--   LLM synthesizes a natural answer\
+-   Retrieve top-K relevant passages
+-   Combine user query + retrieved context
+-   LLM synthesizes a natural answer
 -   Sentiment from ABSA is integrated into final answer
 
 ------------------------------------------------------------------------
@@ -86,22 +86,21 @@ Example:
     Aspect: SERVICE#GENERAL
     Sentiment: Positive
 
-------------------------------------------------------------------------
+
 
 ## 🎓 Training Notebooks
-
   -----------------------------------------------------------------------
   Notebook                            Purpose
-  ----------------------------------- -----------------------------------
-  `train/train_hotel.ipynb`           Train ABSA for hotel domain
+  -----------------------------------------------------------------------
+  `train/train_hotel.ipynb`       |    Train ABSA for hotel domain
 
-  `train/train_restaurant.ipynb`      Train ABSA for restaurant domain
+  `train/train_restaurant.ipynb`     |    Train ABSA for restaurant domain
 
-  `train/visualization.ipynb`         Loss plots, label distribution,
+  '`train/visualization.ipynb`         | Loss plots, label distribution,
                                       confusion matrix, attention
   -----------------------------------------------------------------------
 
-------------------------------------------------------------------------
+
 
 ## 🖼 Demo Images
 
@@ -212,17 +211,17 @@ python app.py
 
 ## 🔮 Future Improvements
 
--   Multi-aspect ABSA\
--   Intent detection integration\
--   FAISS GPU retrieval\
--   Support LLM 1.5B--7B\
+-   Multi-aspect ABSA
+-   Intent detection integration
+-   FAISS GPU retrieval
+-   Support LLM 1.5B--7B
 -   Build a full web chatbot interface
 
 ------------------------------------------------------------------------
 
 ## 👨‍💻 Author
 
-**Tiến Quốc Bảo**\
+**Tiến Quốc Bảo**
 GitHub: https://github.com/tienquocbao
 
 ------------------------------------------------------------------------
